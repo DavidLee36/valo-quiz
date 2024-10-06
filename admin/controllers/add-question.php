@@ -45,4 +45,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit;
 }
 
-view('admin/views/add-question');
+$categories = $categoryModel->getAllCategories();
+view('admin/views/add-question', $categories);

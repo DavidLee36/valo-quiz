@@ -8,11 +8,9 @@
         <label for="category">Category:</label>
         <select name="category" id="category">
             <!-- TODO: AUTOMATICALLY POPULATE CATEGORIES LIST -->
-            <option value="1">Map Based</option>
-            <option value="2">Character Abilities</option>
-            <option value="3">Weapons</option>
-            <option value="4">Lore</option>
-            <option value="5">General Knowledge</option>
+             <?php foreach($model as $category) : ?>
+                <option value="<?= $category->id ?>"><?= $category->name ?></option>
+            <?php endforeach; ?>
         </select>
     </div>
     

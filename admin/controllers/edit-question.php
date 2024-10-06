@@ -12,12 +12,17 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
 
     $question = $questionModel->getQuestion($id);
-    if(!$question) {
+    $categories = $categoryModel->getAllCategories();
+    if(!$question || !$categories) {
         //TODO: implement not_found page
-        echo "Error retrieving question";
+        echo "Error retrieving question or categories";
         die();
     }
-    view('admin/views/edit-question', $question);
+    $data = [
+        'question' => $question,
+        'categories' => $categories
+    ];
+    view('admin/views/edit-question', $data);
 }
 
 

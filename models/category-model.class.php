@@ -1,8 +1,5 @@
 <?php
 
-require('sql-data-provider.class.php');
-
-
 //Class to handle communication with the question_categories table of the database
 class CategoryModel extends MySQLDataProviderModel {
     public function getAllCategories() {
@@ -10,15 +7,14 @@ class CategoryModel extends MySQLDataProviderModel {
     }
 
     public function getCategory($id) {
-        $categoryList = $this->query('SELECT * FROM questions WHERE id = :id', [':id' => $id], 'QuestionCategory');
+        $categoryList = $this->query('SELECT * FROM question_categories WHERE id = :id', [':id' => $id], 'QuestionCategory');
         return $categoryList[0];
     }
 
     public function addCategory($category) {
         $this->execute(
-            'INSERT INTO question_categories (id, name) VALUES (:id, :name)',
+            'INSERT INTO question_categories (name) VALUES (:name)',
             [
-                ':id' => $category['id'],
                 ':name' => $category['name']
             ]
         );
@@ -28,6 +24,7 @@ class CategoryModel extends MySQLDataProviderModel {
         $this->execute(
             'UPDATE question_categories SET name = :name WHERE id = :id',
             [
+                ':id' => $category['id'],
                 ':name' => $category['name']
             ]
         );
