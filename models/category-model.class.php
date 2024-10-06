@@ -2,6 +2,8 @@
 
 require('sql-data-provider.class.php');
 
+
+//Class to handle communication with the question_categories table of the database
 class CategoryModel extends MySQLDataProviderModel {
     public function getAllCategories() {
         return $this->query('SELECT * FROM question_categories', [], 'QuestionCategory');

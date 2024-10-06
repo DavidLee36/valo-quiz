@@ -2,6 +2,7 @@
 
 require('sql-data-provider.class.php');
 
+//Class used for communication with questions table in database
 class QuestionModel extends MySQLDataProviderModel {
 
     public function getAllQuestions() {

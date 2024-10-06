@@ -9,6 +9,6 @@ require(APP_PATH . 'models/question.class.php');
 require(APP_PATH . 'models/question-category.class.php');
 require(APP_PATH . 'models/question-model.class.php');
 
-// Initialize the QuestionModel
+// Initialize the Model classes used in database communication
 $questionModel = new QuestionModel(DBINFO['db']);
 $categoryModel = new CategoryModel(DBINFO['db']);

@@ -1,9 +1,8 @@
 const addPossibleAnswerBtn = document.getElementById('add-possible-answer-btn');
-const addSubmitBtn = document.getElementById('add-question-submit');
 
 const removePossibleAnswerBtn = document.querySelectorAll('.remove-possible-answer-btn');
 
-//Add additional possible answer inputs to the form
+//Add additional possible answer inputs to the add question form
 addPossibleAnswerBtn.addEventListener('click', () => {
     var answerList = document.getElementById('possible-answers-list');
     var newAnswerInput = document.createElement('div');
@@ -27,15 +26,4 @@ if(removePossibleAnswerBtn) {
             parent.remove();
         })
     })
-}
-
-
-//Console log the possible answers submitted
-if(addSubmitBtn) {
-    addSubmitBtn.addEventListener('click', () => {
-        const possibleAnswers = Array.from(document.querySelectorAll('.possible-answer'));
-        possibleAnswers.forEach(element => {
-            console.log(element.value);
-        });
-    });
 }

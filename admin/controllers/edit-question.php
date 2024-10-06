@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Sorry, only JPG, JPEG, PNG, & GIF files are allowed.";
         }
     } else {
-        $question['imageURL'] = $_POST['existing_image_url']; // No image provided
+        $question['imageURL'] = $_POST['existing_image_url']; // No image provided, revert to p
     }
 
     //Add the question to the database

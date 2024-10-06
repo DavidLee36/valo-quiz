@@ -1,5 +1,6 @@
 <?php
 
+//Class used to represent a question
 class Question {
     public $id;
     public $question;

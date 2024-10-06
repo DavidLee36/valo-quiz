@@ -1,5 +1,6 @@
 <?php
 
+//Super class used for other database communication classes throughout the project
 class MySQLDataProviderModel {
     protected $dsn;
 
