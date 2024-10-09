@@ -1,10 +1,9 @@
 <input type="hidden" value="<?= $model->correct_answer ?>" id="correct-answer">
 <h1><?= $model->question ?></h1>
 <?php if(isset($model->image_url)) : ?>
-    <?= $model->image_url ?>
     <img class="question-image" src="/valo-quiz/<?= $model->image_url ?>" alt="error loading image">
 <?php endif; ?>
-<div class="possible-answers-container">
+<div class="possible-answers-container btn-container <?php if(isset($model->image_url)) { echo 'image-answers-btn-container'; } ?>">
     <?php foreach(json_decode($model->possible_answers) as $key => $possibleAnswer) : ?>
         <button class="answer-btn answer-unselected" name="<?= $key ?>">
             <?= $possibleAnswer ?>
@@ -17,7 +16,7 @@
     $nextQidx = $currentQidx + 1;
 ?>
 
-<button class="next-question-btn"
+<button class="next-question-btn answer-correct"
 onclick="window.location.href='question.php?category=<?= $model->category_id ?>&qidx=<?= $nextQidx ?>'"
 style="display: none;">
     Next ->

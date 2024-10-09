@@ -7,6 +7,8 @@
     <link href="../assets/css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <?php require(APP_PATH . "$name.view.php"); ?>
+    <div class="main-content-wrapper">
+        <?php require(APP_PATH . "$name.view.php"); ?>
+    </div>
 </body>
 </html>
