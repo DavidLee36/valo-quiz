@@ -6,10 +6,13 @@ define('APP_PATH', dirname(__FILE__) . '/');
 require(APP_PATH . 'config/database-info.php');
 require(APP_PATH . 'models/functions.php');
 require(APP_PATH . 'models/question.class.php');
+require(APP_PATH . 'models/user.class.php');
 require(APP_PATH . 'models/question-category.class.php');
 require(APP_PATH . 'models/question-model.class.php');
 require(APP_PATH . 'models/category-model.class.php');
+require(APP_PATH . 'models/user-model.class.php');
 
 // Initialize the Model classes used in database communication
 $questionModel = new QuestionModel(DBINFO['db']);
 $categoryModel = new CategoryModel(DBINFO['db']);
+$userModel = new UserModel(DBINFO['db']);

@@ -17,7 +17,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     if(isset($questions[$questionIndex])) {
         view('views/question', $questions[$questionIndex]);
     }else {
-        //TODO: implement category completed page
-        echo 'category completed';
+        redirect("category-complete.php?category=$categoryID");
     }
 }
