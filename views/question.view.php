@@ -1,10 +1,18 @@
-<input type="hidden" value="<?= $model->correct_answer ?>" id="correct-answer">
-<h1><?= $model->question ?></h1>
-<?php if(isset($model->image_url)) : ?>
-    <img class="question-image" src="/valo-quiz/<?= $model->image_url ?>" alt="error loading image">
+<?php
+    $question = $model['question'];
+    $correct = $model['correct'];
+?>
+
+<input type="hidden" value="<?= $correct ?>" id="correct">
+<input type="hidden" value="<?= $question->id ?>" id="question-id">
+<input type="hidden" value="<?= $question->category_id ?>" id="category-id">
+<input type="hidden" value="<?= $question->correct_answer ?>" id="correct-answer">
+<h1><?= $question->question ?></h1>
+<?php if(isset($question->image_url)) : ?>
+    <img class="question-image" src="/valo-quiz/<?= $question->image_url ?>" alt="error loading image">
 <?php endif; ?>
-<div class="possible-answers-container btn-container <?php if(isset($model->image_url)) { echo 'image-answers-btn-container'; } ?>">
-    <?php foreach(json_decode($model->possible_answers) as $key => $possibleAnswer) : ?>
+<div class="possible-answers-container btn-container <?php if(isset($question->image_url)) { echo 'image-answers-btn-container'; } ?>">
+    <?php foreach(json_decode($question->possible_answers) as $key => $possibleAnswer) : ?>
         <button class="answer-btn answer-unselected" name="<?= $key ?>">
             <?= $possibleAnswer ?>
         </button>
@@ -17,7 +25,7 @@
 ?>
 
 <button class="next-question-btn answer-correct"
-onclick="window.location.href='question.php?category=<?= $model->category_id ?>&qidx=<?= $nextQidx ?>'"
+onclick="window.location.href='question.php?category=<?= $question->category_id ?>&qidx=<?= $nextQidx ?>'"
 style="display: none;">
     Next ->
 </button>

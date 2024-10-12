@@ -15,9 +15,20 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     $categories = $categoryModel->getAllCategories();
     $questionsInCategories = [];
+    $correctGuesses = [];
+    $incorrectGuesses = [];
     for($i = 0; $i<sizeof($categories); $i++) {
         $questionsInCategories[$i] = $categoryModel->getNumQuestionsInCategory($categories[$i]->id);
+        $correctGuesses[$i] = $userModel->numCorrectAttemptsInCategory($userID, $categories[$i]->id);
+        $incorrectGuesses[$i] = $userModel->numWrongAttemptsInCategory($userID, $categories[$i]->id);
     }
-    
-    view('views/profile');
+
+    $model = [
+        'categories' => $categories,
+        'numQuestionsInCategory' => $questionsInCategories,
+        'correctGuesses' => $correctGuesses,
+        'incorrectGuesses' => $incorrectGuesses
+    ];
+
+    view('views/profile', $model);
 }

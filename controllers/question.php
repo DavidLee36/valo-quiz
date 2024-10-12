@@ -14,8 +14,21 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     //We use $questions[questionIndex] rather than the id of a question because
     //question id's are not in an easily iterable form
+
     if(isset($questions[$questionIndex])) {
-        view('views/question', $questions[$questionIndex]);
+        //Check if the user has already answered this question
+        $correct = 0;
+        if(isset($_SESSION['user'])) {
+            if($userModel->questionAnsweredCorrectly($_SESSION['user']['id'], $questions[$questionIndex]->id)) {
+                $correct = 1;
+            }
+        }
+        $model = [
+            'question' => $questions[$questionIndex],
+            'correct' => $correct
+        ];
+
+        view('views/question', $model);
     }else {
         redirect("category-complete.php?category=$categoryID");
     }
