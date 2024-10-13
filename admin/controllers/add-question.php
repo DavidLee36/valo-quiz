@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
         // Allow only specific file formats
-        $allowedTypes = ['jpg', 'jpeg', 'png', 'gif'];
+        $allowedTypes = ['jpg', 'jpeg', 'png', 'gif', 'svg'];
         if (in_array(strtolower($fileType), $allowedTypes)) {
             // Move uploaded file to the target directory
             if (move_uploaded_file($_FILES['image_url']['tmp_name'], $targetFilePath)) {

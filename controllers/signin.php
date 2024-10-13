@@ -20,14 +20,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             'username' => $userModel->getUsername($userID)
         ];
 
+        echo $userModel->verifyAdmin($userID);
         if($userModel->verifyAdmin($userID)) {
             $_SESSION['user']['admin'] = true;
         }
 
-        echo "<script>
-                alert('Sign in successful! You will automatically be taken back to the homepage.');
-                window.location.href = '/valo-quiz/controllers/index.php';
-              </script>";
+        redirect('\valo-quiz/controllers/index.php');
         exit();
     }else {
         $msg = 'incorrect username or password';

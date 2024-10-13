@@ -67,8 +67,7 @@ class UserModel extends MySQLDataProviderModel {
             'SELECT * FROM users WHERE id = :id',
             [':id' => $id]
         );
-
-        if ($user && $user[0]->admin) {
+        if ($user && $user[0]['admin']) {
             return true;
         }
 

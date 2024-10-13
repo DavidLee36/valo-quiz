@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $signup = $userModel->addUser($username, $password);
     if($signup) {
         echo "<script>
-                alert('Signup successful! You will be automatically signed in and taken back to the homepage.');
+                alert('Account created successfully');
                 window.location.href = '/valo-quiz/controllers/index.php';
               </script>";
         exit();
