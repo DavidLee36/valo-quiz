@@ -4,25 +4,29 @@ This project is a **Valorant Quiz Website** that I am building to expand my know
 
 ## Project Overview
 
-The purpose of this project is to create a simple quiz platform focused on Valorant. Users will be able to:
+The purpose of this project is to create a simple quiz platform for Riot Games' Valorant. Users will be able to:
 
 - Answer multiple-choice questions about different aspects of the game.
 - Questions are categorized into various topics like **Maps**, **Character Abilities**, **Weapons**, **Lore**, and **General Knowledge**.
+- Be able to track completed questions along with number of correct/failed attempts
 
-The website is built mainly using **PHP** for backend functionality and **MySQL** for managing and storing the quiz questions and user data.
+The website is built mainly using **PHP** for backend functionality, and **MySQL** for managing and storing the quiz questions and user data.
 
 ## Status
 
-- The project is still under development.
-- The database itself **not currently included** in this repository.
-- Implemented full **admin functionality** to perform **CRUD (Create, Read, Update, Delete)** operations on quiz questions. However, user authentication is not yet implemented, so anyone can access the admin features at this point.
+- Project is now hosted and available to be used at [valo-quiz.com](https://valo-quiz.com)
+- Implemented full **admin functionality** to perform **CRUD (Create, Read, Update, Delete)** operations on quiz questions and question categories.
+- Implemented user functionality to sign in and track user data
 
 ## Future Features
-
-- Main quiz functionality (most development so far has been on admin functionality)
-- User authentication to restrict admin access and ensure only authorized users can edit data.
-- User functionality for saving quiz results.
-- Improved UI/UX for a better quiz experience.
+# This project is currently in a state of being 'finished' but here are some possible
+# updates down the line
+- Account recovery
+- Leaderboard
+- Improved UI on admin panel
+- Possible monetization using ads (any and all ads on this site would be unobtrusive)
+- Allow users to upload their own questions which would be approved by an admin
+- Multi-language support
 
 ## Technologies Used
 
