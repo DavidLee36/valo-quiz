@@ -2,6 +2,8 @@
 
 require('../../app.php');
 
+requireAdmin();
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $category = [
         'name' => $_POST['name']

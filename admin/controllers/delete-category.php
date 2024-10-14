@@ -2,6 +2,8 @@
 
 require('../../app.php');
 
+requireAdmin();
+
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $id = $_GET['key'];
 

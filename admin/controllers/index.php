@@ -2,6 +2,8 @@
 
 require('../../app.php');
 
+requireAdmin();
+
 $questions = $questionModel->getAllQuestions();
 $categories = $categoryModel->getAllCategories();
 

@@ -2,7 +2,7 @@
 
 require('../../app.php');
 
-
+requireAdmin();
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $question = [

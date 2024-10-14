@@ -14,3 +14,13 @@ function redirect($url) {
     header("Location: $url");
     die();
 }
+
+function requireAdmin() {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    if(!isset($_SESSION['user']['admin']) || !$_SESSION['user']['admin']) {
+        redirect('\valo-quiz/controllers/index.php');
+    }
+}
