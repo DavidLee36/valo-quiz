@@ -19,8 +19,8 @@ The website is built mainly using **PHP** for backend functionality, and **MySQL
 - Implemented user functionality to sign in and track user data
 
 ## Future Features
-# This project is currently in a state of being 'finished' but here are some possible
-# updates down the line
+### This project is currently in a state of being 'finished' but here are some possible updates down the line
+
 - Account recovery
 - Leaderboard
 - Improved UI on admin panel
