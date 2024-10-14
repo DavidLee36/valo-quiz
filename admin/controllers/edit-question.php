@@ -67,6 +67,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $questionModel->editQuestion($question);
 
     //Redirect back to the main admin page
-    header('Location: /valo-quiz/admin/controllers/');
+    redirect('admin/controllers/index.php');
     exit;
 }

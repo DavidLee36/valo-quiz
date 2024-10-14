@@ -9,7 +9,7 @@
 <input type="hidden" value="<?= $question->correct_answer ?>" id="correct-answer">
 <h1><?= $question->question ?></h1>
 <?php if(isset($question->image_url)) : ?>
-    <img class="question-image" src="/valo-quiz/<?= $question->image_url ?>" alt="error loading image">
+    <img class="question-image" src="https://valo-quiz.com/<?= $question->image_url ?>" alt="error loading image">
 <?php endif; ?>
 <div class="possible-answers-container btn-container <?php if(isset($question->image_url)) { echo 'image-answers-btn-container'; } ?>">
     <?php foreach(json_decode($question->possible_answers) as $key => $possibleAnswer) : ?>
@@ -25,7 +25,7 @@
 ?>
 
 <button class="next-question-btn answer-correct"
-onclick="window.location.href='question.php?category=<?= $question->category_id ?>&qidx=<?= $nextQidx ?>'"
+onclick="window.location.href='https://valo-quiz.com/controllers/question.php?category=<?= $question->category_id ?>&qidx=<?= $nextQidx ?>'"
 style="display: none;">
     Next ->
 </button>

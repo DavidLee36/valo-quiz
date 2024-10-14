@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     //Ensure the userID passed in the url matches the id of the user signed in
     if($userID !== $_SESSION['user']['id']) {
-        redirect('index.php');
+        redirect('controllers/index.php');
         die();
     }
 

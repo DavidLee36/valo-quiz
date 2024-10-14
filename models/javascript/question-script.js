@@ -49,7 +49,7 @@ const disableAnswers = () => {
 
 const sendAttempt = (correct) => {
     // Make an AJAX request to record the attempt
-    fetch('/valo-quiz/controllers/record-attempt.php', {
+    fetch('https://valo-quiz.com/controllers/record-attempt.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

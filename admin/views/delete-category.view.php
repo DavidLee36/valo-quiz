@@ -4,7 +4,7 @@
         <input type="hidden" value="<?= $model->id ?>" name="id">
         <div class="delete-question-btn-group">
             <button type="submit">Delete</button>
-            <button type="button" onclick="window.location.href='index.php'">Cancel</button>
+            <button type="button" onclick="window.location.href='https://valo-quiz.com/admin/controllers/index.php'">Cancel</button>
         </div>
     </form>
 </div>

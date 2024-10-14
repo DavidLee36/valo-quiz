@@ -26,6 +26,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
     $categoryModel->deleteCategory($id);
     
-    header('Location: /valo-quiz/admin/controllers/');
+    redirect('admin/controllers/index.php');
     exit;
 }

@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($signup) {
         echo "<script>
                 alert('Account created successfully');
-                window.location.href = '/valo-quiz/controllers/index.php';
+                window.location.href = 'https://valo-quiz.com/controllers/index.php';
               </script>";
         exit();
     }else {

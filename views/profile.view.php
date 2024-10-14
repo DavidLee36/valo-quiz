@@ -28,4 +28,4 @@ $incorrectGuesses = $model['incorrectGuesses'];
 </div>
 
 
-<button class="logout-btn" onclick="window.location.href='/valo-quiz/controllers/signout.php'">Logout</button>
+<button class="logout-btn" onclick="window.location.href='https://valo-quiz.com/controllers/signout.php'">Logout</button>

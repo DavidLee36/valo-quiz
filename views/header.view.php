@@ -1,6 +1,6 @@
 <div class="header">
     <div class="home-button header-item">
-        <a href="\valo-quiz/controllers/index.php">
+        <a href="https://valo-quiz.com/controllers/index.php">
             <svg id="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495.398 495.398" width="50px" height="50px" class="header-svg">
                 <g>
                     <g>
@@ -19,7 +19,7 @@
     </div>
     <?php if(isset($_SESSION['user']['admin']) && $_SESSION['user']['admin']): ?>
         <div class="header-item header-admin">
-        <a href="\valo-quiz/admin/controllers/index.php">
+        <a href="https://valo-quiz.com/admin/controllers/index.php">
             <h3>Admin Panel</h3>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 610.398 610.398"
@@ -59,7 +59,7 @@
         <?php endif; ?>
         <div class="header-signin header-item">
             <?php if ($user): ?>
-                <a href="\valo-quiz/controllers/profile.php?uid=<?= $user['id'] ?>">
+                <a href="https://valo-quiz.com/controllers/profile.php?uid=<?= $user['id'] ?>">
                     <h3><?= $user['username'] ?></h3>
                     <svg id="signin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24px" height="24px" class="header-svg">
                         <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" />
@@ -67,7 +67,7 @@
                     </svg>
                 </a>
             <?php else: ?>
-                <a href="signin.php">
+                <a href="https://valo-quiz.com/controllers/signin.php">
                     <h3><?= "Sign in" ?></h3>
                     <svg id="signin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24px" height="24px" class="header-svg">
                         <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z" />

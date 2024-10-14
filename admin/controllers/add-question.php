@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Handle image upload
     if (isset($_FILES['image_url']) && $_FILES['image_url']['error'] == 0) {
         // Define where to store the uploaded file
-        $targetDir = APP_PATH . 'assets/images/questions/'; // Change this to your folder path
+        $targetDir = __DIR__ . '/../assets/images/questions/';
         $fileName = basename($_FILES['image_url']['name']);
         $targetFilePath = $targetDir . $fileName;
         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $questionModel->addQuestion($question);
 
     //Redirect back to the main admin page
-    header('Location: /valo-quiz/admin/controllers/');
+    redirect('admin/controllers/index.php');
     exit;
 }
 

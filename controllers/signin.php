@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user']['admin'] = true;
         }
 
-        redirect('\valo-quiz/controllers/index.php');
+        redirect('controllers/index.php');
         exit();
     }else {
         $msg = 'incorrect username or password';

@@ -29,6 +29,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $categoryModel->editCategory($category);
 
-    header('Location: /valo-quiz/admin/controllers/');
+    redirect('admin/controllers/index.php');
     exit;
 }

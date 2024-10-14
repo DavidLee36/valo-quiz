@@ -53,7 +53,7 @@ class MySQLDataProviderModel {
         try {
             return new PDO($this->dsn, DBINFO['db_user'], DBINFO['db_password']);
         }catch(PDOException $e) {
-            return null;
+            die("Database connectoin failed: " . $e->getMessage());
         }
     }
 }

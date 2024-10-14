@@ -11,7 +11,7 @@ function view($name, $model = '') {
 }
 
 function redirect($url) {
-    header("Location: $url");
+    header("Location: https://valo-quiz.com/$url");
     die();
 }
 

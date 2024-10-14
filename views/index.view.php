@@ -4,6 +4,6 @@
 </div>
 <div class="categories-container btn-container">
     <?php foreach($model as $category) : ?>
-        <button class="category-btn" onclick="window.location.href='question.php?category=<?= $category->id ?>&qidx=0'"><?= $category->name ?></button>
+        <button class="category-btn" onclick="window.location.href='https://valo-quiz.com/controllers/question.php?category=<?= $category->id ?>&qidx=0'"><?= $category->name ?></button>
     <?php endforeach; ?>
 </div>

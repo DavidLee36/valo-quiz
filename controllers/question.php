@@ -30,6 +30,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         view('views/question', $model);
     }else {
-        redirect("category-complete.php?category=$categoryID");
+        redirect("controllers/category-complete.php?category=$categoryID");
     }
 }
